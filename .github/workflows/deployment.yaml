@@ -41,7 +41,7 @@ jobs:
       - name: Checkout another repo
         uses: actions/checkout@v3
         with:
-          repository: schema-creator/k8s
+          repository: murasame29/my-k8s-config
           token: ${{ secrets.GH_PAT }}
           ref: master
 
