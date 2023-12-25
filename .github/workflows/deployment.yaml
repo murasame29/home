@@ -47,8 +47,8 @@ jobs:
 
       - name: Change manifest
         run: |
-          cd my-k8s-config
-          yq -i '.spec.template.spec.containers[0].image = "${{ secrets.HARBOR_REGISTRY }}/${{ github.repository }}:${{ github.sha }}"' 'frontend.yaml'
+          cd home-page
+          yq -i '.spec.template.spec.containers[0].image = "${{ secrets.HARBOR_REGISTRY }}/${{ github.repository }}:${{ github.sha }}"' 'deployment.yaml'
       
       - name: push repository
         run: |
