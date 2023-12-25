@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # environment variables 
 *.env
+
+# vscode settings
+.vscode/
