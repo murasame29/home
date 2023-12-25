@@ -19,5 +19,10 @@ COPY --from=build /app/dist ./dist
 
 ENV HOST=0.0.0.0
 ENV PORT=8080
+ENV NR_ACCOUNT_ID=
+ENV NR_TRUST_KEY=
+ENV NR_AGENT_ID=
+ENV NR_LICENSE_KEY=
+ENV NR_APPLICATION_ID=
 EXPOSE 8080
 CMD node ./dist/server/entry.mjs
