@@ -1,10 +1,16 @@
+---
 const accountID = import.meta.env.NR_ACCOUNT_ID;
 const trustKey = import.meta.env.NR_TRUST_KEY;
 const agentID = import.meta.env.NR_AGENT_ID;
 const licenseKey = import.meta.env.NR_LICENSE_KEY;
 const applicationID = import.meta.env.NR_APPLICATION_ID;
+---
 
-window.NREUM || (NREUM = {});
+<script
+  define:vars={{ accountID, trustKey, agentID, licenseKey, applicationID }}
+  type="text/javascript"
+>
+  window.NREUM || (NREUM = {});
   NREUM.init = {
     distributed_tracing: { enabled: true },
     privacy: { cookies_enabled: true },
@@ -3410,3 +3416,4 @@ window.NREUM || (NREUM = {});
         });
       })();
   })();
+</script>
