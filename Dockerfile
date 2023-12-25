@@ -6,7 +6,7 @@ RUN npm clean-install
 RUN npm run build
 
 FROM node:lts-alpine AS runner
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /build/dist ./dist
 
 ENV HOST=0.0.0.0
 ENV PORT=8080
