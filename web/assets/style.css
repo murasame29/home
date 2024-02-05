@@ -1,0 +1,8 @@
+body {
+    background: url('/web/assets/backgroundimg.png');
+    background-size: cover;
+}
+
+.contents table{
+    margin: 0 auto;
+}

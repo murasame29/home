@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
-	"github.com/murasame29/home/internal/components/top"
+	"github.com/murasame29/home/internal/page/top"
 	"github.com/murasame29/home/internal/router/middleware"
 	"github.com/sirupsen/logrus"
 )
