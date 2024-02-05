@@ -1,6 +1,0 @@
-# お前は邪魔だ来るな
-.DS_Store
-# 依存関係はBuilderで管理する
-node_modules
-# すでにビルドしたファイルを無視する
-dist
