@@ -6,7 +6,7 @@ import (
 )
 
 // CounterKey はctxに格納するカウンターのキーです。
-type CounterKey string
+type CounterKey struct{}
 
 // Counter は閲覧者のカウントを行うミドルウェアです。
 func (m *middleware) Counter(next http.Handler) http.Handler {
@@ -15,7 +15,7 @@ func (m *middleware) Counter(next http.Handler) http.Handler {
 		counter := 0
 		ctx := r.Context()
 
-		ctx = context.WithValue(ctx, CounterKey("counter"), counter)
+		ctx = context.WithValue(ctx, CounterKey{}, counter)
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }

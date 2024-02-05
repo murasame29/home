@@ -14,6 +14,7 @@ type middleware struct {
 type Middleware interface {
 	Recover(next http.Handler) http.Handler
 	Counter(next http.Handler) http.Handler
+	AccessLog(next http.Handler) http.Handler
 }
 
 // New はミドルウェアを生成します。

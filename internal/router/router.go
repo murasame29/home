@@ -31,6 +31,6 @@ func New(l *logrus.Logger) http.Handler {
 
 func (r *router) index() {
 	handler := top.NewHandler()
-	r.mux.Handle("/", middleware.BuildChain(handler, r.middleware.Recover, r.middleware.Counter))
+	r.mux.Handle("/", middleware.BuildChain(handler, r.middleware.Recover, r.middleware.AccessLog, r.middleware.Counter))
 	app.Route("/", top.NewComponent())
 }
